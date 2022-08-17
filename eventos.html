@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sound Garden - Eventos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -22,56 +21,7 @@
             <div class="container text-center">
                 <h2>Todos os Eventos</h2>
             </div>
-            <div class="container d-flex justify-content-center align-items-center flex-wrap">
-                <article class="evento card p-5 m-3">
-                    <h2>nome do evento - 05/03/2022</h2>
-                    <h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
-                        dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
-                        nobis in inventore tenetur asperiores.</p>
-                    <a href="#" class="btn btn-primary">reservar ingresso</a>
-                </article>
-                <article class="evento card p-5 m-3">
-                    <h2>nome do evento - 05/03/2022</h2>
-                    <h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
-                        dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
-                        nobis in inventore tenetur asperiores.</p>
-                    <a href="#" class="btn btn-primary">reservar ingresso</a>
-                </article>
-                <article class="evento card p-5 m-3">
-                    <h2>nome do evento - 05/03/2022</h2>
-                    <h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
-                        dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
-                        nobis in inventore tenetur asperiores.</p>
-                    <a href="#" class="btn btn-primary">reservar ingresso</a>
-                </article>
-                <article class="evento card p-5 m-3">
-                    <h2>nome do evento - 05/03/2022</h2>
-                    <h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
-                        dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
-                        nobis in inventore tenetur asperiores.</p>
-                    <a href="#" class="btn btn-primary">reservar ingresso</a>
-                </article>
-                <article class="evento card p-5 m-3">
-                    <h2>nome do evento - 05/03/2022</h2>
-                    <h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
-                        dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
-                        nobis in inventore tenetur asperiores.</p>
-                    <a href="#" class="btn btn-primary">reservar ingresso</a>
-                </article>
-                <article class="evento card p-5 m-3">
-                    <h2>nome do evento - 05/03/2022</h2>
-                    <h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
-                        dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
-                        nobis in inventore tenetur asperiores.</p>
-                    <a href="#" class="btn btn-primary">reservar ingresso</a>
-                </article>
-            </div>
+            <div id="eventos" class="container d-flex justify-content-center align-items-center flex-wrap"></div>
         </section>
         <section class="full d-flex justify-content-center align-items-center"
             style="background-color: #f2f2f2; color: #555">
@@ -121,6 +71,73 @@
             </nav>
         </div>
     </footer>
-</body>
-
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Reservar Ingresso</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <input type="hidden" id="id">
+                <div class="form-group">
+                    <label for="nome" class="form-label">Nome do Evento</label>
+                    <input type="text" class="form-control" id="nome" aria-describedby="nome" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="atracoes" class="form-label">Atrações</label>
+                    <input type="text" class="form-control" id="atracoes" aria-describedby="atracoes" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="data" class="form-label">Data</label>
+                            <input type="datetime" name="data" id="data" class="form-control"
+                                placeholder="00/00/00 00:00"  disabled>
+                </div>
+                <div class="form-group">
+                    <label for="nomeComprador" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nomeComprador" placeholder="Digite aqui o seu Nome" aria-describedby="atracoes">
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="text" class="form-control" id="email" placeholder="Digite aqui seu E-mail" aria-describedby="atracoes">
+                </div>
+                <div class="form-group">
+                    <label for="lotacao" class="form-label">Qtde de Ingressos</label>
+                            <input type="number" class="form-control" id="lotacao" aria-describedby="lotacao">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              <button type="submit" id="submit" class="btn btn-primary">Reservar</button>
+            </div>
+          </div>
+        </div>
+      </div>           
+    <script src="./js/eventos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+<script>
+    const btnSubmit = document.getElementById('submit');
+    btnSubmit.onclick = (evento) => addBooking(evento);
+    $('#exampleModal').on('show.bs.modal', function (event) {
+    let button = $(event.relatedTarget) // Botão que acionou o modal
+    let nomeEvento = button.data('whatever');
+    let atracoesEvento = button.data('whatever2');
+    let dataEvento = button.data('whatever3');
+    let idEvento = button.data('whatever4')
+       
+    let modal = $(this)
+    modal.find('.modal-title').text(`Reservar Ingresso para ${nomeEvento}`);
+    modal.find('.modal-body #nome').val(nomeEvento);
+    modal.find('.modal-body #atracoes').val(atracoesEvento);
+    modal.find('.modal-body #data').val(dataEvento);
+    modal.find('.modal-body #id').val(idEvento);
+    })
+</script>
 </html>
