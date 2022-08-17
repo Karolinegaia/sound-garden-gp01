@@ -10,12 +10,10 @@ const listarEventos = async () => {
         }
     }).then((resposta) => {
 
-        //retorna lista em array de objetos
-        return resposta.json();
+    return resposta.json();
     });
 
-    // console.log(eventos);
-
+    
     const tbody = document.querySelector('.lista-eventos tbody');
 
     let htmlEventos = "";
