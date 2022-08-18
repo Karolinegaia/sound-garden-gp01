@@ -21,7 +21,7 @@ const listarEventos = async () => {
     eventos.forEach(evento => {
         htmlEventos += `
             <tr>
-                <th scope="row">#</th>
+                <th scope="row">${evento._id}</th>
                 <td>${evento.scheduled}</td>
                 <td>${evento.name}</td>
                 <td>${evento.attractions.join(', ')}</td>
