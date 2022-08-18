@@ -73,7 +73,7 @@ formCadastroEvento.addEventListener('submit', async (event) => {
         console.log(responseOBJ);
     }).then (() => {
         alert('Evento Editado com Sucesso!');
-        window.location.href = './admin.html';    
+        window.location.href = 'admin.html';    
     })
     .catch(err => {
         alert('Cadastro não efetuado!')

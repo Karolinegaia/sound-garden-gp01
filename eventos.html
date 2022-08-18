@@ -81,7 +81,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <form>
+              <form id="reservar">
                 <input type="hidden" id="id">
                 <div class="form-group">
                     <label for="nome" class="form-label">Nome do Evento</label>
@@ -123,10 +123,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
 <script>
-    const btnSubmit = document.getElementById('submit');
-    btnSubmit.onclick = (evento) => addBooking(evento);
+    
     $('#exampleModal').on('show.bs.modal', function (event) {
-    let button = $(event.relatedTarget) // Botão que acionou o modal
+    let button = $(event.relatedTarget)
     let nomeEvento = button.data('whatever');
     let atracoesEvento = button.data('whatever2');
     let dataEvento = button.data('whatever3');

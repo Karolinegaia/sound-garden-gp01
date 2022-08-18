@@ -31,3 +31,36 @@ const listarEventos = async () => {
 }
 
 listarEventos();
+
+ 
+async function addBooking(event){
+    event.preventDefault();
+    let owner = document.querySelector('#nomeComprador').value;
+    let email = document.querySelector('#email').value;
+    let ticket = document.querySelector('#lotacao').value;
+    let idIngresso = document.querySelector('#id').value;
+
+    const data = {
+        'owner_name': owner,
+        'owner_email': email,
+        'number_tickets': ticket,
+        'event_id': idIngresso
+    }
+    const url = 'https://xp41-soundgarden-api.herokuapp.com/bookings';
+    const response = await fetch(url, {
+        method: 'POST',
+        mode: "cors",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    }).then(() => {
+        alert('Reserva feita com sucesso!')
+        window.location.href = 'eventos.html'
+    }).catch(err => {
+        console.log(Err);
+    })
+}
+
+const btnSubmit = document.getElementById('submit');
+btnSubmit.onclick = (evento) => addBooking(evento);
