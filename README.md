@@ -91,11 +91,11 @@ Uma casa de show chamada Sound Garden será inaugurada e precisa de um site que 
 
 Clone este repositório remoto em seu equipamento:
 ```
-git clone git@github.com:pedrorackoff/sound-garden-xp44.git
+git clone git@github.com:Karolinegaia/sound-garden-gp01.git
 ```
 Ou utilize o GitHub Pages para visualizar a página:
 ```
-https://pedrorackoff.github.io/sound-garden-xp44/index.html
+https://karolinegaia.github.io/sound-garden-gp01/
 ```
 
 <br>
