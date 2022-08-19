@@ -105,15 +105,15 @@ https://pedrorackoff.github.io/sound-garden-xp44/index.html
 
 <br>
 
-<center><img src="./img/print1.png"></center>
+<center><img src="./img\print-01.png"></center>
 
 <br>
 
-<center><img src="./img/print2.png"></center>
+<center><img src="./img/print-02.png"></center>
 
 <br>
 
-<center><img src="./img/print3.png"></center>
+<center><img src="./img/print-03.png"></center>
 
 <br><br>
 
@@ -134,7 +134,7 @@ Projeto desenvolvido por:
     </td>
     <td align="center">
       <a href="https://www.linkedin.com/in/wallace-bruno-717981150">
-        <img src="https://media-exp1.licdn.com/dms/image/D4D35AQFka8BRFJC12g/profile-framedphoto-shrink_200_200/0/1659065858978?e=1661490000&v=beta&t=6f08jrk9S_ntSO8Tn-R893vIq2_ZiGmAX5TrsKpZUXYgit" width="100px;" alt=""/><br>
+        <img src="https://media-exp1.licdn.com/dms/image/D4D35AQFka8BRFJC12g/profile-framedphoto-shrink_800_800/0/1659065858978?e=1661518800&v=beta&t=YDvj77l_0kM-dX9HfhPQKzvEwRqx4-GURmaJu2pIZ2o" width="100px;" alt=""/><br>
         <sub>
           <b>Wallace Bruno</b>
         </sub>
