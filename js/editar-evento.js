@@ -26,7 +26,7 @@ const exibirDetalhesEvento = async () => {
     const inputBanner = document.getElementById("banner");
 
     inputNome.value = dadosEvento.name;
-    inputAtracoes.value = dadosEvento.attractions.join(', ');
+    inputAtracoes.value = dadosEvento.attractions.join(',');
     inputBanner.value = dadosEvento.poster;
     inputDescricao.value = dadosEvento.description;
     inputData.value = dadosEvento.scheduled;
